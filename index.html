@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <style>
+        .fruits-container li{
+            color: yellowgreen;
+        }
+        #fruits-title{
+            color: black;
+        }
+        .important-places{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Welcome to my Dom</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum praesentium optio, quia beatae iure sequi! Reprehenderit iure laboriosam suscipit saepe eum perferendis tempore aliquam enim vel, doloremque repellat repudiandae ut.</p>
+    </header>
+    <main id="main-container">
+       <section>
+        <h1>My aswsome Dom</h1>
+        <ul>
+            <li>jalaliset</li>
+            <li>Shafayet</li>
+            <li>Bonobash</li>
+            <li>Dom de re</li>
+            <li>Dom de re baba</li>
+        </ul>
+       </section>
+       <section class="fruits-container">
+        <h1 id="fruits-title" class="some-class">I like Fruits</h1>
+        <ul>
+            <li>apple</li>
+            <li>banana</li>
+            <li>carot</li>
+        </ul>
+       </section>
+       <section id="places-container" class="large-text">
+        <h1 id="places-title"> Places i like visited</h1>
+        <ul id="places-list">
+            <li class="important-places">sundorbon</li>
+            <li class="important-places">bandorbon</li>
+            <li class="important-places">katabon</li>
+            <li class="other-class">salbon</li>
+        </ul>
+       </section>
+    </main>
+    <script src="js/DOM.js"></script>
+    <script src="js/append.js"></script>
+    <script src="js/styleIn.js"></script>
+    <script>
+     const liCollention = document.getElementsByTagName('li');
+    //  console.log(liCollention);
+    for(const li of liCollention){
+        // console.log(li.innerText);
+    }
+    
+    // option :1 getElementsByTagName
+    const allHeaders = document.getElementsByTagName('h1');
+    for( const h1 of allHeaders){
+        // console.log(h1.innerText);
+    }
+    
+    // option : 2 getElementById
+    const fruitsTitle = document.getElementById('fruits-title');
+    fruitsTitle.innerText = 'fruits changes by JS'
+
+    // option : 3 getElementsByClassName
+    const places = document.getElementsByClassName('important-places');
+    for(const place of places ){
+        // console.log(place.innerText);
+    }
+
+    // option : 4 queryselector
+ 
+    // option : 5 queryselectorAlll
+    const someLi = document.querySelectorAll('.fruits-container li');
+    // console.log(someLi);
+    for(const li of someLi){
+        // console.log(li.innerText);
+    }
+    </script>
+</body> 
+</html>
